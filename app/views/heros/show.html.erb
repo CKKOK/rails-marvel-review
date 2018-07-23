@@ -1,0 +1,7 @@
+<h1><%= "#{@hero.name}'s Items of Mass Destruction" %></h1>
+
+<ul>
+    <% @items.each do |item| %>
+        <li><%= item.name %></li>
+    <% end %>
+</ul>

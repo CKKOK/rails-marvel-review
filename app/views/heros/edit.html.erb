@@ -1,0 +1,4 @@
+<%= form_for @hero, :local => true do |form| %>
+    <%= form.text_field :name, placeholder: 'Name' %><br />
+    <%= form.submit 'Create' %>
+<% end %>

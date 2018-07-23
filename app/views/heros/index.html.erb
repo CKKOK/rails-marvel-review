@@ -1,0 +1,9 @@
+<h1>Heros of Marvel</h1>
+<ul>
+    <% @heros.each do |hero| %>
+        <li>
+            <%= link_to "#{hero.name} is alive!", hero_path(hero) %>
+            <%= link_to 'Delete', delete_hero_path(hero), method: :delete %>
+        </li>
+    <% end %>
+</ul>

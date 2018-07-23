@@ -1,0 +1,11 @@
+<% url = @hero ? hero_items_path(@hero) : items_path %>
+<% if @hero %>
+    <h1>Create a new item <%= "for #{@hero.name}"%></h1>
+<% else %>
+    <h1>Create a new item</h1>
+<% end %>
+<%= form_for @item, url: url, :local => true do |form| %>
+    <%= form.text_field :name, placeholder: 'Name' %><br />
+    <%= form.text_field :description, placeholder: 'Description' %><br />
+    <%= form.submit 'Create' %>
+<% end %>
